@@ -1,19 +1,13 @@
-.home-container {
-
-    width: 100%;
-    height: 100%;
-    
-}
 
 #root {
+
     background: url('https://static.wixstatic.com/media/d01fe9_b22518db86e94a6d87fc8c0317bf22bc~mv2_d_4833_3108_s_4_2.jpg/v1/fill/w_1293,h_844,al_c,q_85,usm_0.66_1.00_0.01/YC3A2680%20copy_JPG.webp');
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
-    
     width: 100%;
     height: 100%;
-
+    position: absolute;
 }
 
 
@@ -23,8 +17,8 @@
     left: 25%;
     margin: auto;
     */
-    position: relative;
-    padding-left: 10%;
+    position: absolute;
+    left: 10%;
     top: 50%;
 
     word-wrap: break-word;

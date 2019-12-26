@@ -36,7 +36,7 @@ const MyNavBar = ({ children }) => {
 const Home = () => (
     <Container className="home-container">
         <MyNavBar />
-        <h1 className="display-4 d-flex justify-content-start em-wide home-title">Pavithra Rangarajan</h1>
+        <h1 className="display-4 d-flex justify-content-start em-wide home-title">Pavithra <br/> Rangarajan</h1>
     </Container>
   );
 
