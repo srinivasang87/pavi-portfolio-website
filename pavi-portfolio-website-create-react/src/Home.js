@@ -5,7 +5,6 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
-import './custom.scss'
 import "./GoogleFonts.css"
 import "./core.css";
 import "./Home.css";
