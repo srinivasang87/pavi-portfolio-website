@@ -5,37 +5,39 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
-
+import "./GoogleFonts.css"
 import "./core.css";
-import "./App.css";
+import "./Home.css";
 
 const MyNavBar = ({ children }) => {
     const [show, toggleShow] = useState(true);
     return (
         <Container>
             <Navbar sticky="top" bg="light" expand="lg" >
-                <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="mr-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#link">Link</Nav.Link>
-                    <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                    <Nav className="mx-auto">
+                    <Nav.Link className="active font-weight-bold px-md-4 real-active" href="#home">Home</Nav.Link>
+                    <Nav.Link className="active px-md-4" href="#link">Link</Nav.Link>
+                    <NavDropdown title="Dropdown" className="active" id="basic-nav-dropdown">
+                        <NavDropdown.Item className="active px-md-4" href="#action/3.1">Action</NavDropdown.Item>
+                        <NavDropdown.Item className="active px-md-4" href="#action/3.2">Another action</NavDropdown.Item>
+                        <NavDropdown.Item className="active px-md-4" href="#action/3.3">Something</NavDropdown.Item>
+                        
+                        <NavDropdown.Item className="active px-md-4" href="#action/3.4">Separated link</NavDropdown.Item>
                     </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
-        </Container>
+        </Container>       
     );
 };
 
 const Home = () => (
-    <MyNavBar />
+    <Container className="home-container">
+        <MyNavBar />
+        <h1 className="display-4 d-flex justify-content-start em-wide home-title">Pavithra Rangarajan</h1>
+    </Container>
   );
 
 
