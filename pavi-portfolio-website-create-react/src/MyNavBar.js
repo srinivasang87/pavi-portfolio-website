@@ -8,9 +8,9 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 function HomeLink(children) {
     const activeNavLink = children.activeNavLink;
     if (activeNavLink && activeNavLink === 'home') {
-        return <Nav.Link className="active font-weight-bold px-md-4 real-active" href="#home">Home</Nav.Link>
+        return <Nav.Link className="active font-weight-bold px-md-4 real-active" href="/">Home</Nav.Link>
     } else {
-        return <Nav.Link className="active font-weight-bold px-md-4" href="#home">Home</Nav.Link>
+        return <Nav.Link className="active font-weight-bold px-md-4" href="/">Home</Nav.Link>
     }
   }
   
