@@ -7,8 +7,7 @@ import Home from './Home';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 // Importing the Bootstrap CSS
@@ -44,7 +43,7 @@ function App() {
             <Route path="/about">
               <About />
             </Route>
-            <Route path="/fashion-design/time-travel">
+            <Route path="/fashion-design/time-travel.html">
               
               <TimeTravel />
             </Route>
@@ -61,10 +60,6 @@ function App() {
   
   function About() {
     return <h2>About</h2>;
-  }
-  
-  function Users() {
-    return <h2>Users</h2>;
   }
 
   ReactDOM.render(<App />, document.getElementById('root'));

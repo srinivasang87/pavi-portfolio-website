@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -19,7 +19,7 @@ function HomeLink(children) {
     
     if (activeNavLink && activeNavLink === 'fashiondesign') {
         return <NavDropdown className="active font-weight-bold px-md-4 real-active" title="Fashion Design" id="basic-nav-dropdown">
-        <NavDropdown.Item className="active px-md-4" href="/fashion-design/time-travel">Time Travel</NavDropdown.Item>
+        <NavDropdown.Item className="active px-md-4" href="/fashion-design/time-travel.html">Time Travel</NavDropdown.Item>
         <NavDropdown.Item className="active px-md-4" href="#action/3.2">Beaute Devastatrice</NavDropdown.Item>
         <NavDropdown.Item className="active px-md-4" href="#action/3.3">The Bull%apos;s Eye</NavDropdown.Item>
         <NavDropdown.Item className="active px-md-4" href="#action/3.4">Predator Plastic</NavDropdown.Item>
@@ -27,7 +27,7 @@ function HomeLink(children) {
         </NavDropdown>
     } else {
         return <NavDropdown className="active font-weight-bold px-md-4" title="Fashion Design" id="basic-nav-dropdown">
-          <NavDropdown.Item className="active px-md-4" href="/fashion-design/time-travel">Time Travel</NavDropdown.Item>
+          <NavDropdown.Item className="active px-md-4" href="/fashion-design/time-travel.html">Time Travel</NavDropdown.Item>
           <NavDropdown.Item className="active px-md-4" href="#action/3.2">Beaute Devastatrice</NavDropdown.Item>
           <NavDropdown.Item className="active px-md-4" href="#action/3.3">The Bull%apos;s Eye</NavDropdown.Item>
           <NavDropdown.Item className="active px-md-4" href="#action/3.4">Predator Plastic</NavDropdown.Item>
