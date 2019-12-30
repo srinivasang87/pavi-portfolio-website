@@ -2,24 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Home from './Home';
 
-
-
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
-
 // Importing the Bootstrap CSS
 import './custom.scss'
 import "./GoogleFonts.css"
 import "./core.css";
 
-import TimeTravel from './Fashion-Design/TimeTravel';
-
-
 ReactDOM.render(<Home />, document.getElementById('root'));
-
+/*
 function App() {
     return (
       <Router>
@@ -36,10 +25,10 @@ function App() {
                 <Link to="/fashion-design/time-travel">TimeTravel</Link>
               </li>
             </ul>
-          </nav> */}
-  
-          {/* A <Switch> looks through its children <Route>s and
-              renders the first one that matches the current URL. */}
+          </nav> } */
+  /*
+          { 
+            //A <Switch> looks through its children <Route>s and renders the first one that matches the current URL.
           <Switch>
             <Route path="/about">
               <About />
@@ -57,10 +46,5 @@ function App() {
       </Router>
     );
   }
-  
-  
-  function About() {
-    return <h2>About</h2>;
-  }
-
+  */
   //ReactDOM.render(<App />, document.getElementById('root'));
