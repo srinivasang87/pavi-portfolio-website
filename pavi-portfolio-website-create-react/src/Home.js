@@ -9,10 +9,12 @@ import "./Home.css";
 import MyNavBar from "./MyNavBar";
 
 const Home = () => (
-  <Container className="home-container">
-      <MyNavBar activeNavLink="home" />
+  <div>
+    <MyNavBar activeNavLink="home" />
+    <Container className="home-container">
       <h1 className="display-4 d-flex justify-content-start em-wide home-title">Pavithra <br/> Rangarajan</h1>
-  </Container>
+    </Container>
+  </div>
 );
 
 export default Home;

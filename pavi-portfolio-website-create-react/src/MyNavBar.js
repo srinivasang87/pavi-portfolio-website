@@ -103,8 +103,8 @@ function HomeLink(children) {
   const MyNavBar = (children) => {
       const activeNavLink = children.activeNavLink;
       
-      return <Container>
-      <Navbar fixed="top" bg="light" expand="xl" >
+      return <div>
+      <Navbar sticky="top" bg="light" expand="xl" >
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mx-auto">
@@ -117,7 +117,10 @@ function HomeLink(children) {
       </Nav>
       </Navbar.Collapse>
       </Navbar>
-      </Container>
+      <Navbar fixed="top" bg="transparent">
+
+      </Navbar>
+      </div>
   };
 
   export default MyNavBar;
