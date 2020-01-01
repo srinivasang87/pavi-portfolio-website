@@ -120,7 +120,7 @@ const TimeTravel = () => {
       
       <Carousel slide={false} indicators={false} interval={null}>
           <Carousel.Item>
-            <Row>
+            <Row className="align-items-center">
                 <Col className="col-4 md-auto" onClick={() => { setShow(true); setModalCarouselIndex(0); setCarouselLabel(labels[0]); } }>
                 <a href="#"><img src={img1} className="img-fluid" alt="..." /></a>
                 </Col>
@@ -137,7 +137,7 @@ const TimeTravel = () => {
             </Row>
           </Carousel.Item>
           <Carousel.Item>
-            <Row>
+            <Row className="align-items-center">
                 <Col className="col-4 md-auto" onClick={() => { setShow(true); setModalCarouselIndex(3);setCarouselLabel(labels[3]); } }>
                 <a href="#"><img src={img4} className="d-block w-100" alt="..." /></a>
                 </Col>
@@ -150,7 +150,7 @@ const TimeTravel = () => {
             </Row>
           </Carousel.Item>
           <Carousel.Item>
-            <Row>
+            <Row className="align-items-center">
                 <Col className="col-4 md-auto" onClick={() => { setShow(true); setModalCarouselIndex(6); setCarouselLabel(labels[6]);  } }>
                 <a href="#"><img src={img7} className="d-block w-100" alt="..." /></a>
                 </Col>
@@ -163,7 +163,7 @@ const TimeTravel = () => {
             </Row>
           </Carousel.Item>
           <Carousel.Item>
-            <Row>
+            <Row className="align-items-center">
                 <Col className="col-4 md-auto" onClick={() => { setShow(true); setModalCarouselIndex(9); setCarouselLabel(labels[9]);  } }>
                 <a href="#"><img src={img10} className="d-block w-100" alt="..." /></a>
                 </Col>
@@ -176,7 +176,7 @@ const TimeTravel = () => {
             </Row>
           </Carousel.Item>
           <Carousel.Item>
-            <Row>
+            <Row className="align-items-center">
                 <Col className="col-4 md-auto" onClick={() => { setShow(true); setModalCarouselIndex(12); setCarouselLabel(labels[12]);  } }>
                 <a href="#"><img src={img13} className="d-block w-100" alt="..." /></a>
                 </Col>
@@ -189,7 +189,7 @@ const TimeTravel = () => {
             </Row>
           </Carousel.Item>
           <Carousel.Item>
-            <Row>
+            <Row className="align-items-center">
                 <Col className="col-4 md-auto" onClick={() => { setShow(true); setModalCarouselIndex(15); setCarouselLabel(labels[15]);  } }>
                 <a href="#"><img src={img16} className="d-block w-100" alt="..." /></a>
                 </Col>
@@ -202,7 +202,7 @@ const TimeTravel = () => {
             </Row>
           </Carousel.Item>
           <Carousel.Item>
-            <Row>
+            <Row className="align-items-center">
                 <Col className="col-4 md-auto" onClick={() => { setShow(true); setModalCarouselIndex(18); setCarouselLabel(labels[18]);  } }>
                 <a href="#"><img src={img19} className="d-block w-100" alt="..." /></a>
                 </Col>
@@ -215,7 +215,7 @@ const TimeTravel = () => {
             </Row>
           </Carousel.Item>
           <Carousel.Item>
-            <Row>
+            <Row className="align-items-center">
                 <Col className="col-4 md-auto" onClick={() => { setShow(true); setModalCarouselIndex(21); setCarouselLabel(labels[22]);  } }>
                 <a href="#"><img src={img22} className="d-block w-100" alt="..." /></a>
                 </Col>
@@ -228,7 +228,7 @@ const TimeTravel = () => {
             </Row>
           </Carousel.Item>
           <Carousel.Item>
-            <Row>
+            <Row className="align-items-center">
                 <Col className="col-4 md-auto" onClick={() => { setShow(true); setModalCarouselIndex(24); setCarouselLabel(labels[25]); } }>
                 <a href="#"><img src={img25} className="d-block w-100" alt="..." /></a>
                 </Col>
@@ -248,7 +248,7 @@ const TimeTravel = () => {
         onHide={() => {setShow(false); setModalCarouselIndex(0); }}
         dialogClassName="not-modal-90w"
         aria-labelledby="contained-modal-title-vcenter"
-        size="xl"
+        size="lg"
         centered
       >
         <Modal.Header closeButton>
