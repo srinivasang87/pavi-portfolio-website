@@ -4,21 +4,10 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Modal from "react-bootstrap/Modal";
 import MyNavBar from '../MyNavBar';
+import ImageInCarouselItem from '../common/ImageInCarouselItem';
 
 import "./TimeTravel.css";
 
-// import img1 from "../images/Fashion-Design/TimeTravel/0_d01fe9_93598e5b6f4042df961f3b1a55e5a62a~mv2_d_4200_3300_s_4_2.webp";
-// import img2 from "../images/Fashion-Design/TimeTravel/1_d01fe9_8b9d065484cb48c5a2186a76c1e5580a~mv2_d_4200_3300_s_4_2.webp";
-// import img3 from "../images/Fashion-Design/TimeTravel/2_d01fe9_eaf5471c63884b60af1d7988e5cf2fcd~mv2_d_4200_3300_s_4_2.webp";
-// import img4 from "../images/Fashion-Design/TimeTravel/3_d01fe9_21ffef0563104f4d8566573c88ddf70b~mv2_d_4200_3300_s_4_2.webp";
-// import img5 from "../images/Fashion-Design/TimeTravel/4_d01fe9_a1bf9c4c8640469b9bb8c7fdeaaccc61~mv2_d_4206_3305_s_4_2.webp";
-// import img6 from "../images/Fashion-Design/TimeTravel/5_d01fe9_7ac1a014b5544551981e7f84f8650340~mv2_d_4200_3300_s_4_2.webp";
-// import img7 from "../images/Fashion-Design/TimeTravel/6_d01fe9_98d75fdd14fc4f91969982c8c2e7450a~mv2_d_2325_2836_s_2.webp";
-// import img8 from "../images/Fashion-Design/TimeTravel/7_d01fe9_4fccd3ac4de147faad2e232041c6cf55~mv2_d_4200_3300_s_4_2.webp";
-// import img9 from "../images/Fashion-Design/TimeTravel/8_d01fe9_525a310ec7e948838f7293326ceab490~mv2_d_4200_3300_s_4_2.webp";
-// import img10 from "../images/Fashion-Design/TimeTravel/9_d01fe9_20be3406bdc64d0caf1b2d2ee6f2a443~mv2_d_4200_3300_s_4_2.webp";
-// import img11 from "../images/Fashion-Design/TimeTravel/10_d01fe9_e635fbf91a2f4f1ba86dd1dd8556e094~mv2_d_4200_3300_s_4_2.webp";
-// import img12 from "../images/Fashion-Design/TimeTravel/11_d01fe9_d6b903c40bec4483b09908dc49262df7~mv2_d_4200_3300_s_4_2.webp";
 const img1 = "https://static.wixstatic.com/media/d01fe9_93598e5b6f4042df961f3b1a55e5a62a~mv2_d_4200_3300_s_4_2.jpg/v1/fill/w_533,h_419,al_c,q_90/d01fe9_93598e5b6f4042df961f3b1a55e5a62a~mv2_d_4200_3300_s_4_2.jpg";
 const img2 = "https://static.wixstatic.com/media/d01fe9_8b9d065484cb48c5a2186a76c1e5580a~mv2_d_4200_3300_s_4_2.jpg/v1/fill/w_533,h_419,al_c,q_90/d01fe9_8b9d065484cb48c5a2186a76c1e5580a~mv2_d_4200_3300_s_4_2.jpg";
 const img3 = "https://static.wixstatic.com/media/d01fe9_eaf5471c63884b60af1d7988e5cf2fcd~mv2_d_4200_3300_s_4_2.jpg/v1/fill/w_533,h_419,al_c,q_90/d01fe9_eaf5471c63884b60af1d7988e5cf2fcd~mv2_d_4200_3300_s_4_2.jpg";
@@ -121,123 +110,119 @@ const TimeTravel = () => {
       <Carousel slide={false} indicators={false} interval={null}>
           <Carousel.Item>
             <Row className="align-items-center">
-                <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(0); setCarouselLabel(labels[0]); } }>
+              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(0); setCarouselLabel(labels[0]); } }>
                 <a href="#"><img src={img1} className="img-fluid" alt="..." /></a>
-                </Col>
-                <div className="w-100 d-block d-sm-none"></div>
-                <div className="w-100 d-block d-sm-none"></div>
-                <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(1);  setCarouselLabel(labels[1]);  } }>
+              </Col>
+              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(1);  setCarouselLabel(labels[1]);  } }>
                 <a href="#"><img src={img2} className="img-fluid" alt="..." /></a>
-                </Col>
-                <div className="w-100 d-block d-sm-none"></div>
-                <div className="w-100 d-block d-sm-none"></div>
-                <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(2); setCarouselLabel(labels[2]);  } }>
+              </Col>
+              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(2); setCarouselLabel(labels[2]);  } }>
                 <a href="#"><img src={img3} className="img-fluid" alt="..." /></a> 
-                </Col>
+              </Col>
             </Row>
           </Carousel.Item>
           <Carousel.Item>
             <Row className="align-items-center">
-                <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(3);setCarouselLabel(labels[3]); } }>
+              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(3);setCarouselLabel(labels[3]); } }>
                 <a href="#"><img src={img4} className="img-fluid" alt="..." /></a>
-                </Col>
-                <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(4); setCarouselLabel(labels[4]);  } }>
+              </Col>
+              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(4); setCarouselLabel(labels[4]);  } }>
                 <a href="#"><img src={img5} className="img-fluid" alt="..." /></a> 
-                </Col>
-                <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(5); setCarouselLabel(labels[5]);  } }>
+              </Col>
+              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(5); setCarouselLabel(labels[5]);  } }>
                 <a href="#"><img src={img6} className="img-fluid" alt="..." /></a> 
-                </Col>
+              </Col>
             </Row>
           </Carousel.Item>
           <Carousel.Item>
             <Row className="align-items-center">
                 <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(6); setCarouselLabel(labels[6]);  } }>
-                <a href="#"><img src={img7} className="img-fluid" alt="..." /></a>
+                  <a href="#"><img src={img7} className="img-fluid" alt="..." /></a>
                 </Col>
                 <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(7); setCarouselLabel(labels[7]);  } }>
-                <a href="#"><img src={img8} className="img-fluid" alt="..." /></a> 
+                  <a href="#"><img src={img8} className="img-fluid" alt="..." /></a> 
                 </Col>
                 <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(8); setCarouselLabel(labels[8]);  } }>
-                <a href="#"><img src={img9} className="img-fluid" alt="..." /></a> 
+                  <a href="#"><img src={img9} className="img-fluid" alt="..." /></a> 
                 </Col>
             </Row>
           </Carousel.Item>
           <Carousel.Item>
             <Row className="align-items-center">
-                <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(9); setCarouselLabel(labels[9]);  } }>
+              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(9); setCarouselLabel(labels[9]);  } }>
                 <a href="#"><img src={img10} className="img-fluid" alt="..." /></a>
-                </Col>
-                <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(10); setCarouselLabel(labels[10]);  } }>
+              </Col>
+              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(10); setCarouselLabel(labels[10]);  } }>
                 <a href="#"><img src={img11} className="img-fluid" alt="..." /></a> 
-                </Col>
-                <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(11); setCarouselLabel(labels[11]);  } }>
+              </Col>
+              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(11); setCarouselLabel(labels[11]);  } }>
                 <a href="#"><img src={img12} className="img-fluid" alt="..." /></a> 
-                </Col>
+              </Col>
             </Row>
           </Carousel.Item>
           <Carousel.Item>
             <Row className="align-items-center">
-                <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(12); setCarouselLabel(labels[12]);  } }>
+              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(12); setCarouselLabel(labels[12]);  } }>
                 <a href="#"><img src={img13} className="img-fluid" alt="..." /></a>
-                </Col>
-                <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(13); setCarouselLabel(labels[13]);  } }>
+              </Col>
+              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(13); setCarouselLabel(labels[13]);  } }>
                 <a href="#"><img src={img14} className="img-fluid" alt="..." /></a> 
-                </Col>
-                <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(14); setCarouselLabel(labels[14]);  } }>
+              </Col>
+              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(14); setCarouselLabel(labels[14]);  } }>
                 <a href="#"><img src={img15} className="img-fluid" alt="..." /></a> 
-                </Col>
+              </Col>
             </Row>
           </Carousel.Item>
           <Carousel.Item>
             <Row className="align-items-center">
-                <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(15); setCarouselLabel(labels[15]);  } }>
+              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(15); setCarouselLabel(labels[15]);  } }>
                 <a href="#"><img src={img16} className="img-fluid" alt="..." /></a>
-                </Col>
-                <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(16); setCarouselLabel(labels[16]);  } }>
+              </Col>
+              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(16); setCarouselLabel(labels[16]);  } }>
                 <a href="#"><img src={img17} className="img-fluid" alt="..." /></a> 
-                </Col>
-                <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(17); setCarouselLabel(labels[17]); } }>
+              </Col>
+              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(17); setCarouselLabel(labels[17]); } }>
                 <a href="#"><img src={img18} className="img-fluid" alt="..." /></a> 
-                </Col>
+              </Col>
             </Row>
           </Carousel.Item>
           <Carousel.Item>
             <Row className="align-items-center">
-                <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(18); setCarouselLabel(labels[18]);  } }>
+              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(18); setCarouselLabel(labels[18]);  } }>
                 <a href="#"><img src={img19} className="img-fluid" alt="..." /></a>
-                </Col>
-                <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(19); setCarouselLabel(labels[19]);  } }>
+              </Col>
+              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(19); setCarouselLabel(labels[19]);  } }>
                 <a href="#"><img src={img20} className="img-fluid" alt="..." /></a> 
-                </Col>
-                <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(20); setCarouselLabel(labels[21]);  } }>
+              </Col>
+              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(20); setCarouselLabel(labels[21]);  } }>
                 <a href="#"><img src={img21} className="img-fluid" alt="..." /></a> 
-                </Col>
+              </Col>
             </Row>
           </Carousel.Item>
           <Carousel.Item>
             <Row className="align-items-center">
-                <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(21); setCarouselLabel(labels[22]);  } }>
+              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(21); setCarouselLabel(labels[22]);  } }>
                 <a href="#"><img src={img22} className="img-fluid" alt="..." /></a>
-                </Col>
-                <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(22); setCarouselLabel(labels[23]); } }>
+              </Col>
+              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(22); setCarouselLabel(labels[23]); } }>
                 <a href="#"><img src={img23} className="img-fluid" alt="..." /></a> 
-                </Col>
-                <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(23); setCarouselLabel(labels[24]); } }>
+              </Col>
+              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(23); setCarouselLabel(labels[24]); } }>
                 <a href="#"><img src={img24} className="img-fluid" alt="..." /></a> 
-                </Col>
+              </Col>
             </Row>
           </Carousel.Item>
           <Carousel.Item>
             <Row className="align-items-center">
-                <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(24); setCarouselLabel(labels[25]); } }>
+              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(24); setCarouselLabel(labels[25]); } }>
                 <a href="#"><img src={img25} className="img-fluid" alt="..." /></a>
-                </Col>
-                <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(25); setCarouselLabel(labels[26]); } }>
+              </Col>
+              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(25); setCarouselLabel(labels[26]); } }>
                 <a href="#"><img src={img26} className="img-fluid" alt="..." /></a> 
-                </Col>
-                <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(26); setCarouselLabel(labels[27]); } }>
+              </Col>
+              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(26); setCarouselLabel(labels[27]); } }>
                 <a href="#"><img src={img27} className="img-fluid" alt="..." /></a> 
-                </Col>
+              </Col>
             </Row>
           </Carousel.Item>
       </Carousel>
@@ -259,193 +244,85 @@ const TimeTravel = () => {
         <Modal.Body>
           <Carousel activeIndex={modalCarouselIndex} onSelect={handleSelect} indicators={false} interval={null}>
             <Carousel.Item>
-              <img
-                className="img-fluid"
-                src={img1Big}
-                alt="First slide"
-              />              
+              <img className="img-fluid" src={img1Big} alt="First slide" />              
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="img-fluid"
-                src={img2Big}
-                alt="Second slide"
-              />
+              <img className="img-fluid" src={img2Big} alt="Second slide" />
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="img-fluid"
-                src={img3Big}
-                alt="Third slide"
-              />
+              <img className="img-fluid" src={img3Big} alt="Third slide" />
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="img-fluid"
-                src={img4Big}
-                alt="Third slide"
-              />
+              <img className="img-fluid" src={img4Big} alt="Third slide" />
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="img-fluid"
-                src={img5Big}
-                alt="Third slide"
-              />
+              <img className="img-fluid" src={img5Big} alt="Third slide" />
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="img-fluid"
-                src={img6Big}
-                alt="Third slide"
-              />
+              <img className="img-fluid" src={img6Big} alt="Third slide" />
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="img-fluid"
-                src={img7Big}
-                alt="Third slide"
-              />
+              <img className="img-fluid" src={img7Big} alt="Third slide" />
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="img-fluid"
-                src={img8Big}
-                alt="Third slide"
-              />
+              <img className="img-fluid" src={img8Big} alt="Third slide" />
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="img-fluid"
-                src={img9Big}
-                alt="Third slide"
-              />
+              <img className="img-fluid" src={img9Big} alt="Third slide" />
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="img-fluid"
-                src={img10Big}
-                alt="Third slide"
-              />
+              <img className="img-fluid" src={img10Big} alt="Third slide" />
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="img-fluid"
-                src={img11Big}
-                alt="Third slide"
-              />
+              <img className="img-fluid" src={img11Big} alt="Third slide" />
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="img-fluid"
-                src={img12Big}
-                alt="Third slide"
-              />
+              <img className="img-fluid" src={img12Big} alt="Third slide" />
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="img-fluid"
-                src={img13Big}
-                alt="Third slide"
-              />
+              <img className="img-fluid" src={img13Big} alt="Third slide" />
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="img-fluid"
-                src={img14Big}
-                alt="Third slide"
-              />
+              <img className="img-fluid" src={img14Big} alt="Third slide" />
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="img-fluid"
-                src={img15Big}
-                alt="Third slide"
-              />
+              <img className="img-fluid" src={img15Big} alt="Third slide" />
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="img-fluid"
-                src={img16Big}
-                alt="Third slide"
-              />
+              <img className="img-fluid" src={img16Big} alt="Third slide" />
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="img-fluid"
-                src={img17Big}
-                alt="Third slide"
-              />
+              <img className="img-fluid" src={img17Big} alt="Third slide" />
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="img-fluid"
-                src={img18Big}
-                alt="Third slide"
-              />
+              <img className="img-fluid" src={img18Big} alt="Third slide" />
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="img-fluid"
-                src={img19Big}
-                alt="Third slide"
-              />
+              <img className="img-fluid" src={img19Big} alt="Third slide" />
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="img-fluid"
-                src={img20Big}
-                alt="Third slide"
-              />
+              <img className="img-fluid" src={img20Big} alt="Third slide" />
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="img-fluid"
-                src={img21Big}
-                alt="Third slide"
-              />
+              <img className="img-fluid" src={img21Big} alt="Third slide" />
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="img-fluid"
-                src={img22Big}
-                alt="Third slide"
-              />
+              <img className="img-fluid" src={img22Big} alt="Third slide" />
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="img-fluid"
-                src={img23Big}
-                alt="Third slide"
-              />
+              <img className="img-fluid" src={img23Big} alt="Third slide" />
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="img-fluid"
-                src={img24Big}
-                alt="Third slide"
-              />
+              <img className="img-fluid" src={img24Big} alt="Third slide" />
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="img-fluid"
-                src={img25Big}
-                alt="Third slide"
-              />
+              <img className="img-fluid" src={img25Big} alt="Third slide" />
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="img-fluid"
-                src={img26Big}
-                alt="Third slide"
-              />
+              <img className="img-fluid" src={img26Big} alt="Third slide" />
             </Carousel.Item>
             <Carousel.Item>
-              <img
-                className="img-fluid"
-                src={img27Big}
-                alt="Third slide"
-              />
+              <img className="img-fluid" src={img27Big} alt="Third slide" />
             </Carousel.Item>
           </Carousel>
         </Modal.Body>
