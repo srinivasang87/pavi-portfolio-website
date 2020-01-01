@@ -114,7 +114,7 @@ const TimeTravel = () => {
     setModalCarouselIndex(selectedIndex);
   };
 
-  return (<div>
+  return (<div className="timetravel-super-container">
     <MyNavBar activeNavLink="fashiondesign" />
     <div className="timetravel-container my-9">
       

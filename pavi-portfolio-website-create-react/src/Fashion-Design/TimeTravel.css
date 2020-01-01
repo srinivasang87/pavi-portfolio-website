@@ -6,3 +6,7 @@
     width: 60%;
     max-width: 75% !important;
 }
+
+#root, html, body {
+    background-color: rgb(6, 25, 33);
+}
