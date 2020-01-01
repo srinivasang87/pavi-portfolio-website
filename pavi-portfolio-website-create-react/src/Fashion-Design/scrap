@@ -96,3 +96,5 @@ const TimeTravel = () => (
 );
 
 export default TimeTravel;
+
+<img src={modalImg} className="d-block w-100"/>
