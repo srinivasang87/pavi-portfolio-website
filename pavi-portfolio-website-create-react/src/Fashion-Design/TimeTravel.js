@@ -93,6 +93,34 @@ const labels = [
   "Lineup02.PNG",
 ];
 
+const imgs = [{leImg: img1, leBigImg: img1Big, leLabel: labels[0]},
+ {leImg: img2, leBigImg: img2Big, leLabel: labels[1]},
+ {leImg: img3, leBigImg: img3Big, leLabel: labels[2]},
+ {leImg: img4, leBigImg: img4Big, leLabel: labels[3]},
+ {leImg: img5, leBigImg: img5Big, leLabel: labels[4]},
+ {leImg: img6, leBigImg: img6Big, leLabel: labels[5]},
+ {leImg: img7, leBigImg: img7Big, leLabel: labels[6]},
+ {leImg: img8, leBigImg: img8Big, leLabel: labels[7]},
+ {leImg: img9, leBigImg: img9Big, leLabel: labels[8]},
+ {leImg: img10, leBigImg: img10Big, leLabel: labels[9]},
+ {leImg: img11, leBigImg: img11Big, leLabel: labels[10]},
+ {leImg: img12, leBigImg: img12Big, leLabel: labels[11]},
+ {leImg: img13, leBigImg: img13Big, leLabel: labels[12]},
+ {leImg: img14, leBigImg: img14Big, leLabel: labels[13]},
+ {leImg: img15, leBigImg: img15Big, leLabel: labels[14]},
+ {leImg: img16, leBigImg: img16Big, leLabel: labels[15]},
+ {leImg: img17, leBigImg: img17Big, leLabel: labels[16]},
+ {leImg: img18, leBigImg: img18Big, leLabel: labels[17]},
+ {leImg: img19, leBigImg: img19Big, leLabel: labels[18]},
+ {leImg: img20, leBigImg: img20Big, leLabel: labels[19]},
+ {leImg: img21, leBigImg: img21Big, leLabel: labels[20]},
+ {leImg: img22, leBigImg: img22Big, leLabel: labels[21]},
+ {leImg: img23, leBigImg: img23Big, leLabel: labels[22]},
+ {leImg: img24, leBigImg: img24Big, leLabel: labels[23]},
+ {leImg: img25, leBigImg: img25Big, leLabel: labels[24]},
+ {leImg: img26, leBigImg: img26Big, leLabel: labels[25]},
+ {leImg: img27, leBigImg: img27Big, leLabel: labels[26]}];
+
 const TimeTravel = () => {
   const [show, setShow] = useState(false);
   const [modalCarouselIndex, setModalCarouselIndex] = useState(0);
@@ -103,6 +131,31 @@ const TimeTravel = () => {
     setModalCarouselIndex(selectedIndex);
   };
 
+  function RenderColWithImage(children) {
+    const idx = children.idx;
+    const imgg = children.imgg;
+    const clickable = children.clickable;
+    const onClickHandler = children.onClickHandler;
+    console.log(onClickHandler);
+
+    if (clickable && clickable === true) {
+      return 
+    } else {
+      return <Col className="col-4 mx-auto md-auto">
+        <img src={imgg[idx].leImg} className="img-fluid" alt="..." />
+      </Col>
+    }
+  }
+
+  function RenderCarouselItem(children) {
+    const idx = children.idx;
+    const imgg = children.imgg;
+    
+    return <Carousel.Item>
+      <img src={imgg[idx].leBigImg} className="d-block w-100" alt="..." />
+    </Carousel.Item>
+  }
+
   return (<div className="timetravel-super-container">
     <MyNavBar activeNavLink="fashiondesign" />
     <div className="timetravel-container my-9">
@@ -110,119 +163,65 @@ const TimeTravel = () => {
       <Carousel slide={false} indicators={false} interval={null}>
           <Carousel.Item>
             <Row className="align-items-center">
-              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(0); setCarouselLabel(labels[0]); } }>
-                <a href="#"><img src={img1} className="img-fluid" alt="..." /></a>
-              </Col>
-              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(1);  setCarouselLabel(labels[1]);  } }>
-                <a href="#"><img src={img2} className="img-fluid" alt="..." /></a>
-              </Col>
-              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(2); setCarouselLabel(labels[2]);  } }>
-                <a href="#"><img src={img3} className="img-fluid" alt="..." /></a> 
-              </Col>
+              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(0); setCarouselLabel(imgs[0].leLabel); } }><a href="#"><img src={imgs[0].leImg} className="img-fluid" alt="..." /></a></Col>
+              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(1); setCarouselLabel(imgs[1].leLabel); } }><a href="#"><img src={imgs[1].leImg} className="img-fluid" alt="..." /></a></Col>
+              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(2); setCarouselLabel(imgs[2].leLabel); } }><a href="#"><img src={imgs[2].leImg} className="img-fluid" alt="..." /></a></Col>
             </Row>
           </Carousel.Item>
           <Carousel.Item>
             <Row className="align-items-center">
-              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(3);setCarouselLabel(labels[3]); } }>
-                <a href="#"><img src={img4} className="img-fluid" alt="..." /></a>
-              </Col>
-              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(4); setCarouselLabel(labels[4]);  } }>
-                <a href="#"><img src={img5} className="img-fluid" alt="..." /></a> 
-              </Col>
-              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(5); setCarouselLabel(labels[5]);  } }>
-                <a href="#"><img src={img6} className="img-fluid" alt="..." /></a> 
-              </Col>
+            <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(3); setCarouselLabel(imgs[3].leLabel); } }><a href="#"><img src={imgs[3].leImg} className="img-fluid" alt="..." /></a></Col>
+            <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(4); setCarouselLabel(imgs[4].leLabel); } }><a href="#"><img src={imgs[4].leImg} className="img-fluid" alt="..." /></a></Col>
+            <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(5); setCarouselLabel(imgs[5].leLabel); } }><a href="#"><img src={imgs[5].leImg} className="img-fluid" alt="..." /></a></Col>
             </Row>
           </Carousel.Item>
           <Carousel.Item>
             <Row className="align-items-center">
-                <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(6); setCarouselLabel(labels[6]);  } }>
-                  <a href="#"><img src={img7} className="img-fluid" alt="..." /></a>
-                </Col>
-                <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(7); setCarouselLabel(labels[7]);  } }>
-                  <a href="#"><img src={img8} className="img-fluid" alt="..." /></a> 
-                </Col>
-                <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(8); setCarouselLabel(labels[8]);  } }>
-                  <a href="#"><img src={img9} className="img-fluid" alt="..." /></a> 
-                </Col>
+            <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(6); setCarouselLabel(imgs[6].leLabel); } }><a href="#"><img src={imgs[6].leImg} className="img-fluid" alt="..." /></a></Col>
+            <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(7); setCarouselLabel(imgs[7].leLabel); } }><a href="#"><img src={imgs[7].leImg} className="img-fluid" alt="..." /></a></Col>
+            <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(8); setCarouselLabel(imgs[8].leLabel); } }><a href="#"><img src={imgs[8].leImg} className="img-fluid" alt="..." /></a></Col>
             </Row>
           </Carousel.Item>
           <Carousel.Item>
             <Row className="align-items-center">
-              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(9); setCarouselLabel(labels[9]);  } }>
-                <a href="#"><img src={img10} className="img-fluid" alt="..." /></a>
-              </Col>
-              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(10); setCarouselLabel(labels[10]);  } }>
-                <a href="#"><img src={img11} className="img-fluid" alt="..." /></a> 
-              </Col>
-              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(11); setCarouselLabel(labels[11]);  } }>
-                <a href="#"><img src={img12} className="img-fluid" alt="..." /></a> 
-              </Col>
+            <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(9); setCarouselLabel(imgs[9].leLabel); } }><a href="#"><img src={imgs[9].leImg} className="img-fluid" alt="..." /></a></Col>
+            <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(10); setCarouselLabel(imgs[10].leLabel); } }><a href="#"><img src={imgs[10].leImg} className="img-fluid" alt="..." /></a></Col>
+            <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(11); setCarouselLabel(imgs[11].leLabel); } }><a href="#"><img src={imgs[11].leImg} className="img-fluid" alt="..." /></a></Col>
             </Row>
           </Carousel.Item>
           <Carousel.Item>
             <Row className="align-items-center">
-              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(12); setCarouselLabel(labels[12]);  } }>
-                <a href="#"><img src={img13} className="img-fluid" alt="..." /></a>
-              </Col>
-              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(13); setCarouselLabel(labels[13]);  } }>
-                <a href="#"><img src={img14} className="img-fluid" alt="..." /></a> 
-              </Col>
-              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(14); setCarouselLabel(labels[14]);  } }>
-                <a href="#"><img src={img15} className="img-fluid" alt="..." /></a> 
-              </Col>
+            <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(12); setCarouselLabel(imgs[12].leLabel); } }><a href="#"><img src={imgs[12].leImg} className="img-fluid" alt="..." /></a></Col>
+            <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(13); setCarouselLabel(imgs[13].leLabel); } }><a href="#"><img src={imgs[13].leImg} className="img-fluid" alt="..." /></a></Col>
+            <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(14); setCarouselLabel(imgs[14].leLabel); } }><a href="#"><img src={imgs[14].leImg} className="img-fluid" alt="..." /></a></Col>
             </Row>
           </Carousel.Item>
           <Carousel.Item>
             <Row className="align-items-center">
-              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(15); setCarouselLabel(labels[15]);  } }>
-                <a href="#"><img src={img16} className="img-fluid" alt="..." /></a>
-              </Col>
-              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(16); setCarouselLabel(labels[16]);  } }>
-                <a href="#"><img src={img17} className="img-fluid" alt="..." /></a> 
-              </Col>
-              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(17); setCarouselLabel(labels[17]); } }>
-                <a href="#"><img src={img18} className="img-fluid" alt="..." /></a> 
-              </Col>
+            <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(15); setCarouselLabel(imgs[15].leLabel); } }><a href="#"><img src={imgs[15].leImg} className="img-fluid" alt="..." /></a></Col>
+            <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(16); setCarouselLabel(imgs[16].leLabel); } }><a href="#"><img src={imgs[16].leImg} className="img-fluid" alt="..." /></a></Col>
+            <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(17); setCarouselLabel(imgs[17].leLabel); } }><a href="#"><img src={imgs[17].leImg} className="img-fluid" alt="..." /></a></Col>
             </Row>
           </Carousel.Item>
           <Carousel.Item>
             <Row className="align-items-center">
-              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(18); setCarouselLabel(labels[18]);  } }>
-                <a href="#"><img src={img19} className="img-fluid" alt="..." /></a>
-              </Col>
-              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(19); setCarouselLabel(labels[19]);  } }>
-                <a href="#"><img src={img20} className="img-fluid" alt="..." /></a> 
-              </Col>
-              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(20); setCarouselLabel(labels[21]);  } }>
-                <a href="#"><img src={img21} className="img-fluid" alt="..." /></a> 
-              </Col>
+            <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(18); setCarouselLabel(imgs[18].leLabel); } }><a href="#"><img src={imgs[18].leImg} className="img-fluid" alt="..." /></a></Col>
+            <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(19); setCarouselLabel(imgs[19].leLabel); } }><a href="#"><img src={imgs[19].leImg} className="img-fluid" alt="..." /></a></Col>
+            <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(20); setCarouselLabel(imgs[20].leLabel); } }><a href="#"><img src={imgs[20].leImg} className="img-fluid" alt="..." /></a></Col>
             </Row>
           </Carousel.Item>
           <Carousel.Item>
             <Row className="align-items-center">
-              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(21); setCarouselLabel(labels[22]);  } }>
-                <a href="#"><img src={img22} className="img-fluid" alt="..." /></a>
-              </Col>
-              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(22); setCarouselLabel(labels[23]); } }>
-                <a href="#"><img src={img23} className="img-fluid" alt="..." /></a> 
-              </Col>
-              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(23); setCarouselLabel(labels[24]); } }>
-                <a href="#"><img src={img24} className="img-fluid" alt="..." /></a> 
-              </Col>
+            <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(21); setCarouselLabel(imgs[21].leLabel); } }><a href="#"><img src={imgs[21].leImg} className="img-fluid" alt="..." /></a></Col>
+            <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(22); setCarouselLabel(imgs[22].leLabel); } }><a href="#"><img src={imgs[22].leImg} className="img-fluid" alt="..." /></a></Col>
+            <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(23); setCarouselLabel(imgs[23].leLabel); } }><a href="#"><img src={imgs[23].leImg} className="img-fluid" alt="..." /></a></Col>
             </Row>
           </Carousel.Item>
           <Carousel.Item>
             <Row className="align-items-center">
-              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(24); setCarouselLabel(labels[25]); } }>
-                <a href="#"><img src={img25} className="img-fluid" alt="..." /></a>
-              </Col>
-              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(25); setCarouselLabel(labels[26]); } }>
-                <a href="#"><img src={img26} className="img-fluid" alt="..." /></a> 
-              </Col>
-              <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(26); setCarouselLabel(labels[27]); } }>
-                <a href="#"><img src={img27} className="img-fluid" alt="..." /></a> 
-              </Col>
+            <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(24); setCarouselLabel(imgs[24].leLabel); } }><a href="#"><img src={imgs[24].leImg} className="img-fluid" alt="..." /></a></Col>
+            <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(25); setCarouselLabel(imgs[25].leLabel); } }><a href="#"><img src={imgs[25].leImg} className="img-fluid" alt="..." /></a></Col>
+            <Col className="col-4 mx-auto md-auto" onClick={() => { setShow(true); setModalCarouselIndex(26); setCarouselLabel(imgs[26].leLabel); } }><a href="#"><img src={imgs[26].leImg} className="img-fluid" alt="..." /></a></Col>
             </Row>
           </Carousel.Item>
       </Carousel>
@@ -244,7 +243,7 @@ const TimeTravel = () => {
         <Modal.Body>
           <Carousel activeIndex={modalCarouselIndex} onSelect={handleSelect} indicators={false} interval={null}>
             <Carousel.Item>
-              <img className="img-fluid" src={img1Big} alt="First slide" />              
+              <img className="img-fluid" src={img1Big} alt="Second slide" />
             </Carousel.Item>
             <Carousel.Item>
               <img className="img-fluid" src={img2Big} alt="Second slide" />
