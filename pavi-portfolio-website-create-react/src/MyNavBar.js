@@ -101,9 +101,14 @@ function HomeLink(children) {
   
   const MyNavBar = (children) => {
       const activeNavLink = children.activeNavLink;
-      
+      let sticky = children.sticky && children.sticky === true ? "top" : "";
+      const fixed = children.fixed && children.fixed === true ? "top" : "";
+      if(sticky == "" && fixed == "") { 
+        sticky = "top";
+      }
+
       return <div>
-      <Navbar sticky="top" bg="light" expand="xl" >
+      <Navbar sticky={sticky} fixed={fixed} bg="light" expand="xl" >
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mx-auto">

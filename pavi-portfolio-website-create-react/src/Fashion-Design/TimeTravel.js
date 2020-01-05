@@ -4,9 +4,13 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Modal from "react-bootstrap/Modal";
 import MyNavBar from '../MyNavBar';
-import ImageInCarouselItem from '../common/ImageInCarouselItem';
+import Slider from "react-slick";
 
 import "./TimeTravel.css";
+// Import Slick css files
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Container from 'react-bootstrap/Container';
 
 const img1 = "https://static.wixstatic.com/media/d01fe9_93598e5b6f4042df961f3b1a55e5a62a~mv2_d_4200_3300_s_4_2.jpg/v1/fill/w_533,h_419,al_c,q_90/d01fe9_93598e5b6f4042df961f3b1a55e5a62a~mv2_d_4200_3300_s_4_2.jpg";
 const img2 = "https://static.wixstatic.com/media/d01fe9_8b9d065484cb48c5a2186a76c1e5580a~mv2_d_4200_3300_s_4_2.jpg/v1/fill/w_533,h_419,al_c,q_90/d01fe9_8b9d065484cb48c5a2186a76c1e5580a~mv2_d_4200_3300_s_4_2.jpg";
@@ -121,6 +125,47 @@ const imgs = [{leImg: img1, leBigImg: img1Big, leLabel: labels[0]},
  {leImg: img26, leBigImg: img26Big, leLabel: labels[25]},
  {leImg: img27, leBigImg: img27Big, leLabel: labels[26]}];
 
+ const reactSlickSliderSettings = {
+  className: "center",
+  centerMode: false,
+  infinite: false,
+  centerPadding: "40px",
+  slidesToShow: 3,
+  speed: 500
+};
+
+const SliderTimeTravel = () => {
+  return (<div className="timetravel-super-container">
+  <MyNavBar sticky={true} activeNavLink="fashiondesign" />
+  
+  <div className="slickCarouselContainer">
+    <Container bsPrefix="container-fluid" className="container-fluid">
+      <Slider {...reactSlickSliderSettings}>
+        <div>
+          <img src={imgs[0].leImg} className="foo" alt="..." />
+        </div>
+        <div>
+          <img src={imgs[1].leImg} className="foo" alt="..." />
+        </div>
+        <div>
+          <img src={imgs[2].leImg} className="foo" alt="..." />
+        </div>
+        <div>
+          <img src={imgs[3].leImg} className="foo" alt="..." />
+        </div>
+        <div>
+          <img src={imgs[4].leImg} className="foo" alt="..." />
+        </div>
+        <div>
+          <img src={imgs[5].leImg} className="foo" alt="..." />
+        </div>
+      </Slider>
+      </Container>
+    </div>
+    </div>
+  )
+}
+
 const TimeTravel = () => {
   const [show, setShow] = useState(false);
   const [modalCarouselIndex, setModalCarouselIndex] = useState(0);
@@ -158,6 +203,7 @@ const TimeTravel = () => {
 
   return (<div className="timetravel-super-container">
     <MyNavBar activeNavLink="fashiondesign" />
+    
     <div className="timetravel-container my-9">
       
       <Carousel slide={false} indicators={false} interval={null}>
@@ -329,4 +375,4 @@ const TimeTravel = () => {
   </div>)
 };
 
-export default TimeTravel;
+export default SliderTimeTravel;

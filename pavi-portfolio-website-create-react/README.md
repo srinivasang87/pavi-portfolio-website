@@ -1,5 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 Also uses [React Bootstrap](https://react-bootstrap.github.io/) for bootstrap components.
+FUTURE: Will use [React Slick](https://github.com/akiran/react-slick) to render a preview of next image in Carousel.
 
 ## Available Scripts
 
