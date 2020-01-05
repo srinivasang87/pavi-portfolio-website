@@ -94,7 +94,8 @@ const labels = [
   "Lineup02.PNG",
 ];
 
-const imgs = [{leImg: img1, leBigImg: img1Big, leLabel: labels[0]},
+const imgs = [
+  {leImg: img1, leBigImg: img1Big, leLabel: labels[0]},
  {leImg: img2, leBigImg: img2Big, leLabel: labels[1]},
  {leImg: img3, leBigImg: img3Big, leLabel: labels[2]},
  {leImg: img4, leBigImg: img4Big, leLabel: labels[3]},

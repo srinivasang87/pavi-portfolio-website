@@ -6,9 +6,14 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import ReactDOM from 'react-dom';
 
 import TimeTravel from './Fashion-Design/TimeTravel';
+import BeauteD from './Fashion-Design/BeauteD';
 
 function renderTimeTravel() {
   ReactDOM.render(<TimeTravel/>, document.getElementById("root"));
+}
+
+function renderBeauteD() {
+  ReactDOM.render(<BeauteD/>, document.getElementById("root"));
 }
 
 function HomeLink(children) {
@@ -34,7 +39,7 @@ function HomeLink(children) {
     } else {
         return <NavDropdown className="active font-weight-bold px-md-4" title="Fashion Design" id="basic-nav-dropdown">
           <NavDropdown.Item className="active px-md-4" href="#fashion-design-time-travel" onClick={renderTimeTravel}>Time Travel</NavDropdown.Item>
-          <NavDropdown.Item className="active px-md-4" href="#action/3.2">Beaute Devastatrice</NavDropdown.Item>
+          <NavDropdown.Item className="active px-md-4" href="#fashion-design-beauted" onClick={renderBeauteD}>Beaute Devastatrice</NavDropdown.Item>
           <NavDropdown.Item className="active px-md-4" href="#action/3.3">The Bull%apos;s Eye</NavDropdown.Item>
           <NavDropdown.Item className="active px-md-4" href="#action/3.4">Predator Plastic</NavDropdown.Item>
           <NavDropdown.Item className="active px-md-4" href="#action/3.4">Great Depression</NavDropdown.Item>
