@@ -13,19 +13,22 @@
 
 .timetravel-super-container {
     background: url('../images/timetravel-bg.png');
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-position: top;
     background-size: cover;
     width: 100%;
     height: 100%;
-    position: absolute;
 }
 
 .slickCarouselContainer {
     padding: 20px;
-  }
+}
 
-  .slick-slide img {
+.slick-slide img {
     margin: auto;
-  }
+}
+
+.timeTravelOuterImages {
+    margin: 10px;
+}
   
