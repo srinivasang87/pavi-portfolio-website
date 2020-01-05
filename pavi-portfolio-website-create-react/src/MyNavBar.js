@@ -27,7 +27,7 @@ function HomeLink(children) {
         return <NavDropdown className="active font-weight-bold px-md-4 real-active" title="Fashion Design" id="basic-nav-dropdown">
         <NavDropdown.Item className="active px-md-4" href="#fashion-design-time-travel" onClick={TimeTravel}>Time Travel</NavDropdown.Item>
         <NavDropdown.Item className="active px-md-4" href="#action/3.2">Beaute Devastatrice</NavDropdown.Item>
-        <NavDropdown.Item className="active px-md-4" href="#action/3.3">The Bull%apos;s Eye</NavDropdown.Item>
+        <NavDropdown.Item className="active px-md-4" href="#action/3.3">The Bull&apos;s Eye</NavDropdown.Item>
         <NavDropdown.Item className="active px-md-4" href="#action/3.4">Predator Plastic</NavDropdown.Item>
         <NavDropdown.Item className="active px-md-4" href="#action/3.4">Great Depression</NavDropdown.Item>
         </NavDropdown>
