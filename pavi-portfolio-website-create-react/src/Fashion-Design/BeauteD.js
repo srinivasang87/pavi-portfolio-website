@@ -120,7 +120,7 @@ const BeauteD = () => {
             {images.map((value, index) => {
                 return <Row>
                     <Col className="outerImages" onClick={() => { setShow(true); setModalCarouselIndex(index); } }>
-                        <a href="#"><img src={images[index].leBigImg} className="rounded mx-auto d-block img-fluid" alt="..." /></a>
+                        <a href="#"><img src={images[index].leBigImg} className="rounded mx-auto d-block makeItResponsive" alt="..." /></a>
                     </Col>
                 </Row>
             })}
@@ -137,7 +137,7 @@ const BeauteD = () => {
                 <Carousel activeIndex={modalCarouselIndex} onSelect={handleSelect} indicators={false} interval={null}>
                 {images.map((value, index) => {
                 return <Carousel.Item>
-                        <img className="rounded img-fluid mx-auto d-block" src={images[index].leBigImg} alt="..." />
+                        <img className="rounded w-100 mx-auto d-block" src={images[index].leBigImg} alt="..." />
                     </Carousel.Item>
                 })}
                 </Carousel>

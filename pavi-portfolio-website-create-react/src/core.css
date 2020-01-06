@@ -37,3 +37,7 @@ nav.navbar .navbar-nav > .nav-item > .dropdown-menu > .dropdown-item {
 .dropdown-item.active, .dropdown-item:active {
     background-color: transparent;
 }
+
+.makeItResponsive {
+    max-width: 100%;
+}
