@@ -120,7 +120,7 @@ const BeauteD = () => {
             {images.map((value, index) => {
                 return <Row>
                     <Col className="outerImages" onClick={() => { setShow(true); setModalCarouselIndex(index); } }>
-                        <a href="#"><img src={images[index].leBigImg} className="rounded mx-auto d-block makeItResponsive" alt="..." /></a>
+                        <a href="#"><img src={images[index].leBigImg} className="rounded mx-auto d-block makeItResponsive mw60pct" alt="..." /></a>
                     </Col>
                 </Row>
             })}
@@ -128,16 +128,17 @@ const BeauteD = () => {
             <Modal
                 show={show}
                 onHide={() => {setShow(false); setModalCarouselIndex(0); }}
-                dialogClassName="modal-90w"
+                dialogClassName="modal-img-only"
                 aria-labelledby="contained-modal-title-vcenter"
                 size="xl"
                 centered
+                className="no-padding"
             >
-                <Modal.Body closeButton>
+                <Modal.Body className="no-padding">
                 <Carousel activeIndex={modalCarouselIndex} onSelect={handleSelect} indicators={false} interval={null}>
                 {images.map((value, index) => {
                 return <Carousel.Item>
-                        <img className="rounded w-100 mx-auto d-block" src={images[index].leBigImg} alt="..." />
+                        <img className="rounded mx-auto w-100 d-block" src={images[index].leBigImg} alt="..." />
                     </Carousel.Item>
                 })}
                 </Carousel>

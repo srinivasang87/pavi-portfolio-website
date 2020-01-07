@@ -41,3 +41,16 @@ nav.navbar .navbar-nav > .nav-item > .dropdown-menu > .dropdown-item {
 .makeItResponsive {
     max-width: 100%;
 }
+
+.modal-body.no-padding {
+    padding: 0;
+}
+
+.mw60pct {
+    max-width: 60%;
+}
+
+.modal-img-only {
+    margin-top: 0;
+    max-height: 60%;
+}
