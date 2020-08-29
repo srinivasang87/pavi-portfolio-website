@@ -1,0 +1,26 @@
+.beauted-container {
+    margin: 10px;
+}
+
+.modal-90w {
+    width: 60%;
+    max-width: 75% !important;
+}
+
+/* #root, html, body {
+    background-color: rgb(6, 25, 33);
+} */
+
+.beauted-super-container {
+    background: url('../images/beauted-bg.png');
+    background-repeat: repeat-y;
+    background-position: top;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.outerImages {
+    margin: 10px;
+}
+  

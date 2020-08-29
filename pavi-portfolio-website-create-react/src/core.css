@@ -1,0 +1,56 @@
+
+nav.navbar .navbar-nav .nav-link.real-active,
+nav.navbar .navbar-nav .nav-item.real-active .nav-link {
+    color: #20CE88;
+}
+
+.navbar-expand-xl {
+    opacity: 0.75
+}
+
+nav.navbar > a.dropdown-menu {
+    opacity: initial;
+}
+
+nav a {
+    /*font-size: 25px;*/
+    font-family: 'Julius Sans One', sans-serif;
+    /*font-weight: bolder;*/
+}
+/*
+.dropdown-item {
+    font-weight: bolder;
+}
+*/
+
+nav.navbar .navbar-nav > .nav-item > .dropdown-menu > .dropdown-item:hover {
+    background-color: #20CE88;
+}
+
+nav.navbar .navbar-nav > .nav-item > .dropdown-menu > .dropdown-item {
+    background-color: transparent;
+    color: black;
+}
+
+.em-wide  { letter-spacing: 0.3em; }
+
+.dropdown-item.active, .dropdown-item:active {
+    background-color: transparent;
+}
+
+.makeItResponsive {
+    max-width: 100%;
+}
+
+.modal-body.no-padding {
+    padding: 0;
+}
+
+.mw60pct {
+    max-width: 60%;
+}
+
+.modal-img-only {
+    margin-top: 0;
+    max-height: 60%;
+}
